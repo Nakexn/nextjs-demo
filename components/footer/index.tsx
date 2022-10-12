@@ -28,7 +28,14 @@ export interface IFooterProps {
   publicNumber: string; // 公安备案号
 }
 
-export const Footer: FC<IFooterProps> = ({ title, linkList, qrCode, copyRight, siteNumber, publicNumber }) => {
+export const Footer: FC<IFooterProps> = ({
+  title,
+  linkList,
+  qrCode,
+  copyRight,
+  siteNumber,
+  publicNumber,
+}) => {
   return (
     <div className={styles.footer}>
       <div className={styles.topArea}>
@@ -36,7 +43,10 @@ export const Footer: FC<IFooterProps> = ({ title, linkList, qrCode, copyRight, s
         <div className={styles.linkListArea}>
           {linkList?.map((item, index) => {
             return (
-              <div className={styles.linkArea} key={`linkArea${index}`}>
+              <div
+                className={styles.linkArea}
+                key={`linkArea${index}`}
+              >
                 <span className={styles.title}>{item.title}</span>
                 <div className={styles.links}>
                   {item.list?.map((_item, _index) => {
@@ -44,12 +54,14 @@ export const Footer: FC<IFooterProps> = ({ title, linkList, qrCode, copyRight, s
                       <div
                         className={cName({
                           [styles.link]: _item.link,
-                          [styles.disabled]: !_item.link
+                          [styles.disabled]: !_item.link,
                         })}
                         onClick={(): void => {
-                          _item.link && window.open(_item.link, 'blank', 'noopener=yes,noreferrer=yes');
+                          _item.link &&
+                            window.open(_item.link, 'blank', 'noopener=yes,noreferrer=yes');
                         }}
-                        key={`link${_index}`}>
+                        key={`link${_index}`}
+                      >
                         {_item.label}
                       </div>
                     );
@@ -63,7 +75,12 @@ export const Footer: FC<IFooterProps> = ({ title, linkList, qrCode, copyRight, s
       <div className={styles.bottomArea}>
         <div className={styles.codeArea}>
           <div>
-            <Image src={qrCode?.image} alt={qrCode?.text} width={56} height={56}></Image>
+            <Image
+              src={qrCode?.image}
+              alt={qrCode?.text}
+              width={56}
+              height={56}
+            ></Image>
           </div>
           <div className={styles.text}>{qrCode?.text}</div>
         </div>
@@ -72,7 +89,12 @@ export const Footer: FC<IFooterProps> = ({ title, linkList, qrCode, copyRight, s
           <span>{siteNumber}</span>
           <div className={styles.publicLogo}>
             <div className={styles.logo}>
-              <Image src={publicLogo} alt={publicNumber} width={20} height={20}></Image>
+              <Image
+                src={publicLogo}
+                alt={publicNumber}
+                width={20}
+                height={20}
+              ></Image>
             </div>
             <span>{publicNumber}</span>
           </div>

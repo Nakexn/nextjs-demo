@@ -8,7 +8,11 @@ export interface ILayoutProps {
   footerData: IFooterProps;
 }
 
-export const Layout: FC<ILayoutProps & { children: JSX.Element }> = ({ navbarData, footerData, children }) => {
+export const Layout: FC<ILayoutProps & { children: JSX.Element }> = ({
+  navbarData,
+  footerData,
+  children,
+}) => {
   return (
     <div className={styles.layout}>
       <NavBar {...navbarData} />

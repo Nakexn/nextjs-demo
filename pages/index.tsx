@@ -30,7 +30,8 @@ const Home: NextPage<IProps> = ({ title, description, list }) => {
                 className={styles.card}
                 onClick={(): void => {
                   window.open(item.link, 'blank', 'noopener=yes,noreferrer=yes');
-                }}>
+                }}
+              >
                 <h2>{item.label} &rarr;</h2>
                 <p>{item.info}</p>
               </div>
@@ -50,34 +51,34 @@ Home.getInitialProps = context => {
       {
         label: '文章1',
         info: 'A test for article1',
-        link: 'http://localhost:3000/article/1'
+        link: 'http://localhost:3000/article/1',
       },
       {
         label: '文章2',
         info: 'A test for article2',
-        link: 'http://localhost:3000/article/2'
+        link: 'http://localhost:3000/article/2',
       },
       {
         label: '文章3',
         info: 'A test for article3',
-        link: 'http://localhost:3000/article/3'
+        link: 'http://localhost:3000/article/3',
       },
       {
         label: '文章4',
         info: 'A test for article4',
-        link: 'http://localhost:3000/article/4'
+        link: 'http://localhost:3000/article/4',
       },
       {
         label: '文章5',
         info: 'A test for article5',
-        link: 'http://localhost:3000/article/5'
+        link: 'http://localhost:3000/article/5',
       },
       {
         label: '文章6',
         info: 'A test for article6',
-        link: 'http://localhost:3000/article/6'
-      }
-    ]
+        link: 'http://localhost:3000/article/6',
+      },
+    ],
   };
 };
 

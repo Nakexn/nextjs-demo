@@ -15,7 +15,7 @@ const Article: NextPage<IProps> = ({ articleId }) => {
 Article.getInitialProps = context => {
   const { articleId } = context.query;
   return {
-    articleId: Number(articleId)
+    articleId: Number(articleId),
   };
 };
 
