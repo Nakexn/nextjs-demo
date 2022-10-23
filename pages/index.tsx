@@ -63,7 +63,7 @@ const Home: NextPage<IProps> = ({ title, description, list }) => {
 Home.getInitialProps = context => {
 	return {
 		title: 'Hello SSR!',
-		description: 'A Demo for 《深入浅出SSR官网开发指南》',
+		description: 'A Demo for 《SSR 实战：官网开发指南》',
 		list: [
 			{
 				label: '文章1',
